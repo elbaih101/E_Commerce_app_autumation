@@ -12,11 +12,11 @@ import java.util.List;
 
 public class P01_Register {
     public WebDriver driver = Hooks.driver;
-
+    PageFactory pageFactory=new PageFactory();
     //PAGE FACTORY POM
     //1- CONSTRUCTOR
     public P01_Register() {
-        PageFactory.initElements(driver, this);
+        pageFactory.initElements(driver, this);
     }
 
     @FindBy(className = "ico-register")
@@ -47,7 +47,7 @@ public class P01_Register {
 
     })
     public List<WebElement> namefields;
-    @FindBy(name = "DateOfBirthDay")
+    @FindBy(name="DateOfBirthDay")
     public WebElement daylist;
     @FindBy(name = "DateOfBirthMonth")
     public WebElement monthlist;

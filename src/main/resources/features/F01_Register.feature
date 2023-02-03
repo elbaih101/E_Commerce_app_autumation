@@ -8,7 +8,8 @@ Feature: F01_register| guest user could create new account
     And user enters "automation" & "tester"
     And user selects date of birth
     And user enters email
-    And users enters passowrd "zebyalso8yer" and confirms it
+    And users enters passowrd "p@sswOrd" and confirms it
     And user clicks on register button
-    Then account is created succesfuly
+    Then success message is displayed
+
 

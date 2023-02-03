@@ -1,7 +1,6 @@
 package com.elbaih.stepDefs;
 
 import com.elbaih.pages.P01_Register;
-import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -64,8 +63,7 @@ public class D01_ReStepDEf {
     //generate random email
 
     public void userEntersemail()  {
-        Faker fake =new Faker();
-       String emailAddress = fake.internet().safeEmailAddress();
+       String emailAddress ="test@example.com"  ;
         register.email.sendKeys(emailAddress);
 
     }
@@ -82,10 +80,9 @@ public class D01_ReStepDEf {
         register.regButton.click();
     }
 
-    @Then("account is created succesfuly")
+    @Then("success message is displayed")
     public void accountIsCreatedSuccesfuly() {
         wait.until(ExpectedConditions.urlContains("/registerresult"));
-        register.succesmessage.isDisplayed();
         soft.assertTrue(register.succesmessage.isDisplayed());
         soft.assertTrue(register.succesmessage.getText().contains("Your registration completed"));
         String actcolor = Color.fromString(register.succesmessage.getCssValue("color")).asHex();
