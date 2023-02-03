@@ -1,3 +1,4 @@
+@smoke
 Feature: F03_currencies.feature|user should be able to change currencies
 
   Scenario: user changes currency to euro
