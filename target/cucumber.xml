@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="236.022" tests="15" skipped="0" failures="3" errors="0">
+<testcase classname="F01_register| guest user could create new account" name="user create new account using valid user name and email and password" time="11.063">
+<system-out><![CDATA[
+Given user go to register page..............................................passed
+When user selects gender type...............................................passed
+And user enters "automation" & "tester".....................................passed
+And user selects date of birth..............................................passed
+And user enters email.......................................................passed
+And users enters passowrd "p@sswOrd" and confirms it........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="5.533">
+<system-out><![CDATA[
+Given user go to login page.................................................passed
+When user login with "valid" "test@example.com" and "p@sswOrd"..............passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="63.353">
+<system-out><![CDATA[
+Given user go to login page.................................................passed
+When user login with "invalid" "wrong@example.com" and "p@sswOrd"...........passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies.feature|user should be able to change currencies" name="user changes currency to euro" time="4.852">
+<system-out><![CDATA[
+When user Select Euro currency from the dropdown list on the top left of home page.passed
+Then currency changes for the product shown in the page.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search.feature |search feature functionality" name="user could search using product name - Example #1.1" time="5.339">
+<system-out><![CDATA[
+When user enters product "name" "book"in the search bar.....................passed
+And user clicks search button...............................................passed
+Then user is directed to search resault page................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search.feature |search feature functionality" name="user could search using product name - Example #1.2" time="7.42">
+<system-out><![CDATA[
+When user enters product "name" "laptop"in the search bar...................passed
+And user clicks search button...............................................passed
+Then user is directed to search resault page................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search.feature |search feature functionality" name="user could search using product name - Example #1.3" time="62.056">
+<failure type="org.openqa.selenium.WebDriverException" message="unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: MicrosoftEdge=109.0.1518.78)
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [97f136c1893a7fdede13146467cd6149, get {url=https://demo.nopcommerce.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 109.0.1518.78, ms:edgeOptions: {debuggerAddress: localhost:49210}, msedge: {msedgedriverVersion: 109.0.1518.78 (4e4b32c38163..., userDataDir: C:\Users\we\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49210/devtoo..., se:cdpVersion: 109.0.1518.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97f136c1893a7fdede13146467cd6149">
+<![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: MicrosoftEdge=109.0.1518.78)
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [97f136c1893a7fdede13146467cd6149, get {url=https://demo.nopcommerce.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 109.0.1518.78, ms:edgeOptions: {debuggerAddress: localhost:49210}, msedge: {msedgedriverVersion: 109.0.1518.78 (4e4b32c38163..., userDataDir: C:\Users\we\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49210/devtoo..., se:cdpVersion: 109.0.1518.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 97f136c1893a7fdede13146467cd6149
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
+	at com.elbaih.stepDefs.Hooks.start(Hooks.java:25)
+]]>
+</failure>
+<system-out><![CDATA[
+When user enters product "name" "nike"in the search bar.....................skipped
+And user clicks search button...............................................skipped
+Then user is directed to search resault page................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search.feature |search feature functionality" name="user could search using product sku - Example #1.1" time="8.969">
+<system-out><![CDATA[
+When user enters product "serialno" "SCI_FAITH"in the search bar............passed
+And user clicks search button...............................................passed
+Then user is directed to search resault page................................passed
+And user clicks on the earched item.........................................passed
+And user is directed to the required item with sku "SCI_FAITH"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search.feature |search feature functionality" name="user could search using product sku - Example #1.2" time="6.811">
+<system-out><![CDATA[
+When user enters product "serialno" "APPLE_CAM"in the search bar............passed
+And user clicks search button...............................................passed
+Then user is directed to search resault page................................passed
+And user clicks on the earched item.........................................passed
+And user is directed to the required item with sku "APPLE_CAM"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search.feature |search feature functionality" name="user could search using product sku - Example #1.3" time="6.855">
+<system-out><![CDATA[
+When user enters product "serialno" "SF_PRO_11"in the search bar............passed
+And user clicks search button...............................................passed
+Then user is directed to search resault page................................passed
+And user clicks on the earched item.........................................passed
+And user is directed to the required item with sku "SF_PRO_11"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_hoverCategories.feature | user when hovers on categories dynamic lists appear" name="users can hover over categories to show their sub lists and navigate to any list he desires" time="15.967">
+<system-out><![CDATA[
+When randomly selecting a category..........................................passed
+And select random sub category from the main one............................passed
+Then the subcategory page is navigated to...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_homeSliders.feature| user should be able to interact with sliders" name="user can interact with the slider with the samsung phone" time="8.615">
+<failure type="java.lang.AssertionError" message="The following asserts failed:
+	expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.elbaih.stepDefs.D06_homeSlidersStepDef.userdirectedtophonepage(D06_homeSlidersStepDef.java:29)
+	at ✽.user is directed to the phone page "/samsung-s22"(file:///D:/java%20maven%20projects/E-commerce_App/src/main/resources/features/F06_homeSliders.feature:5)
+]]>
+</failure>
+<system-out><![CDATA[
+When user clicks on the "0000089_banner_02.webp" "samsung" slider...........passed
+Then user is directed to the phone page "/samsung-s22"......................failed
+]]></system-out>
+</testcase>
+<testcase classname="F06_homeSliders.feature| user should be able to interact with sliders" name="user can interact with the slider with the iphone phone" time="4.437">
+<failure type="java.lang.AssertionError" message="The following asserts failed:
+	expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.elbaih.stepDefs.D06_homeSlidersStepDef.userdirectedtophonepage(D06_homeSlidersStepDef.java:29)
+	at ✽.user is directed to the phone page "/iphone-14"(file:///D:/java%20maven%20projects/E-commerce_App/src/main/resources/features/F06_homeSliders.feature:8)
+]]>
+</failure>
+<system-out><![CDATA[
+When user clicks on the "0000088_banner_01.webp" "iphone" slider............passed
+Then user is directed to the phone page "/iphone-14"........................failed
+]]></system-out>
+</testcase>
+<testcase classname="F08_Wishlist.feature | user can add products to wish list and be able to view it" name="user adds the htc one phone to his wish list" time="4.423">
+<system-out><![CDATA[
+When user clicks on wish list button on the htc phone product...............passed
+Then message that confirms addition of the phone appears....................passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_Wishlist.feature | user can add products to wish list and be able to view it" name="user after adding the htc one phone" time="19.959">
+<system-out><![CDATA[
+When user clicks on wish list button on the htc phone product...............passed
+Then message that confirms addition of the phone appears....................passed
+When the success message disapear user clicks on the wishlist button on top of the page.passed
+Then verify the quantity of the product is bigger than 0....................passed
+]]></system-out>
+</testcase>
+</testsuite>
