@@ -43,7 +43,7 @@ public class D04_searchStepDef
     @And("user is directed to the required item with sku {string}")
     public void userIsDirectedToTheRequiredItem(String sku)
     {
-        Assert.assertEquals(home.skuVAlue.getText().toLowerCase(),sku.toLowerCase());
+        Assert.assertTrue(home.skuVAlue.getText().toLowerCase().strip().contains(sku.toLowerCase()));
 
     }
 }

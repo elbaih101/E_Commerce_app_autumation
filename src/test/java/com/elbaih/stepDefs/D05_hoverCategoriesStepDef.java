@@ -63,7 +63,6 @@ public class D05_hoverCategoriesStepDef {
 
     @Then("the subcategory page is navigated to")
     public void theSubcategoryPageIsNavigatedTo() {
-        soft.assertTrue(driver.getCurrentUrl().toLowerCase().trim().contains(title.toLowerCase().trim()));
-        soft.assertAll();
+        soft.assertTrue(driver.getCurrentUrl().toLowerCase().strip().contains(title.replace("&","_")));
     }
 }

@@ -36,7 +36,7 @@ public class P03_homePage {
     })
     public List<WebElement> shownProductList;
 
-    @FindBy(className = "value")
+    @FindBy(className = "sku")
     public WebElement skuVAlue;
 
     @FindAll({
