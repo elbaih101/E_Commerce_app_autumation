@@ -36,12 +36,22 @@ public class P03_homePage {
     })
     public List<WebElement> shownProductList;
 
-@FindBy(className ="value" )
+    @FindBy(className = "value")
     public WebElement skuVAlue;
 
-@FindAll( {
-        @FindBy(xpath ="//ul[@class=\"top-menu notmobile\"]/li")
-})
-   public List<WebElement> categories;
+    @FindAll({
+            @FindBy(xpath = "//ul[@class=\"top-menu notmobile\"]/li")
+    })
+    public List<WebElement> categories;
 
+
+    @FindBy(xpath = "//div[@id=\"nivo-slider\"]/img")
+    public WebElement slider;
+
+    @FindBy(className = "bar-notification")
+    public WebElement notificationbar;
+    @FindBy(className = "ico-wishlist")
+    public WebElement wishlist;
+        @FindBy(className="qty-input")
+    public WebElement quantityofwishlistproduct;
 }
