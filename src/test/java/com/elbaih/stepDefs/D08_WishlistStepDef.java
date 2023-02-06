@@ -15,7 +15,7 @@ import java.time.Duration;
 public class D08_WishlistStepDef {
     P03_homePage home = new P03_homePage();
 SoftAssert soft =new SoftAssert();
-WebDriverWait wait =new WebDriverWait(Hooks.driver, Duration.ofSeconds(10));
+WebDriverWait wait =new WebDriverWait(Hooks.driver, Duration.ofSeconds(2));
     @When("user clicks on wish list button on the htc phone product")
     public void addtowishlist() {
         WebElement product = null;
