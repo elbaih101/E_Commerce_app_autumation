@@ -54,4 +54,6 @@ public class P03_homePage {
     public WebElement wishlist;
         @FindBy(className="qty-input")
     public WebElement quantityofwishlistproduct;
+        @FindBy(className ="networks")
+    public WebElement networks;
 }
