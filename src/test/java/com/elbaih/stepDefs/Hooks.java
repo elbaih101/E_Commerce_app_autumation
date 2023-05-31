@@ -5,6 +5,7 @@ import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,7 +20,8 @@ public class Hooks
         String value =System.getProperty("user.dir")+"/Browsers/msedgedriver.exe";*/
     //1- create bridge using WebDriverManager dependency
         WebDriverManager.edgedriver().setup();
-        driver=new EdgeDriver();
+        driver=new EdgeDriver(new EdgeOptions().addArguments("--remote-allow-origins=*"));
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://demo.nopcommerce.com/");
@@ -37,6 +39,7 @@ public class Hooks
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+        driver.close();
         driver.quit();
     }
 }
